@@ -12,7 +12,7 @@ O QEAM utiliza a API do Deezer (https://developers.deezer.com/api) para fazer as
 SIM! Basta seguir os seguintes passos:
 
 Baixe ou clone o repositório na sua máquina:
-> git clone ...
+> git clone https://github.com/candidovitu/qeam.git
 
 Instale as dependências:
 > npm install
