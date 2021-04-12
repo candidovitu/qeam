@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>QEAM - Qual é a música?</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon" href="/public/img/icon.webp" type="image/x-icon">
+    <link rel='stylesheet' type='text/css' media='screen' href='public/css/main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='public/css/game.css'>
+    <script src="https://kit.fontawesome.com/0b46031f4a.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+    <script src='public/js/utils.js'></script>
+    <script src='public/js/index.js'></script>
+</head>
+<body>
+
+    <!--
+        ATENÇÃO: A intenção deste jogo não é ser um sistema extremamente seguro, anti-cheat e bla bla bla.
+        A intenção é unicamente divertir os usuários que acessarem.
+        Por aqui, você vai achar o que procura (e talvez um pouco mais). Divirta-se mesmo assim. :-)
+    -->
+
+    <div class="home-select-genre">
+
+        <div class="input-search">
+            <div class="icon">
+                <i class="fas fa-search"></i>
+            </div>
+            <input type="text" placeholder="Pesquisar" id="search-input">
+        </div>
+
+        <div class="genre-list">    
+        </div>
+
+    </div>
+
+    <div class="game">
+        
+        <header class="game-header">
+
+            <div class="cover-image">
+                <img src="" alt="">
+            </div>
+
+            <div class="details">
+
+                <h2 class="title">Qual é a música?</h2>
+                <h4 class="category"></h4>
+
+                <div class="controls">
+
+                    <div class="btn" onclick="
+                        $('#audio-player')[0].pause();
+                        $('#audio-player')[0].currentTime = 0;
+                        $('#audio-player')[0].play();
+                    ">
+                        <i class="fas fa-redo-alt"></i>
+                    </div>
+
+                    <div class="btn" onclick="$('#audio-player')[0].pause();">
+                        <i class="fas fa-pause"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <div class="deezer-player"></div>
+
+        <div class="choices"></div>
+
+    </div>
+
+    <div class="next-btn" onclick="nextMatch();">
+        Próxima partida <i class="fas fa-angle-double-right"></i>
+    </div>
+
+    <div class="loading-screen">
+
+        <div class="disk">
+            <i class="fas fa-compact-disc icon"></i>
+        </div>
+
+    </div>
+
+    <audio src="" id="audio-player"></audio>
+</body>
+</html>
