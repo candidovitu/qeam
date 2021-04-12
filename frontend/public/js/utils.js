@@ -106,8 +106,11 @@ function selectChoice(id) {
 }
 
 function nextMatch() {
+    errorTries = 0;
+
     startMatch();
     alreadySelectedChoice = false;
+    
     for(let btn of $('.game .choices .choice')) {
         $(btn).remove();
     };
