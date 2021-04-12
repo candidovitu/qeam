@@ -15,6 +15,6 @@ app.use('/public', express.static('frontend/public'));
 app.use('/', routes.main);
 app.use('/game', routes.game);
 
-app.listen(3000, () => {
-    console.log('Listening at 3000!');
+app.listen(process.env.APP_PORT, () => {
+    console.log(`Listening at ${process.env.APP_PORT}!`);
 });
