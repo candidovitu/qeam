@@ -15,6 +15,6 @@ app.use('/public', express.static('frontend/public'));
 app.use('/', routes.main);
 app.use('/game', routes.game);
 
-app.listen(process.env.APP_PORT, () => {
-    console.log(`Listening at ${process.env.APP_PORT}!`);
+app.listen(process.env.PORT, () => {
+    console.log(`Listening at ${process.env.PORT}!`);
 });
